@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+  font-family: 'Nunito', sans-serif;
+  margin: 0;
+    padding: 0;
+    background: url('images/bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #5c4f4d;
+
+}   
+.wrap {
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+  padding-top: 30px;
+
+}
+.profile {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.photo {
+  height: 100px;
+  width: 100%;        
+}
+.img{
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background: url("images/logo.png");
+  background-position: center;
+  background-size: cover;
+  margin: 0 auto;
+  border: solid 5px #ffffff;
+}
+.profile_name {
+  font-weight: bold;
+  display: block;
+  margin: 4px 0;
+  padding-top: 25px;
+  font-size: 25px;
+}
+.at {
+  font-size: 18px;
+    display: block;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+.my-button {
+  background: #ffefef;
+  font-weight: 600;
+  color: #5c4f4d;
+  border-radius: 8px;
+  border: solid 1px #efd1d1;
+  padding: 10px;
+  margin: 0 0 10px 0;
+  text-align: left;
+  display: block;
+  font-size: 22px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+
+}
+
+.icon-pull-right {
+   float: right;
+   padding-top: 2px;
+}
+.my-button:hover {
+  background-color: #FFFFFF; /* Cambia el color de fondo al pasar el ratón */
+}
+
+.my-button .icon-pull-right {
+  margin-left: 10px;
+}
+
+/* Efecto de sombra al hacer clic */
+.my-button:active {
+  transform: scale(0.95);
+}
+.desc {
+  display: block;
+  margin: 1px 0;
+  font-size: 14px;
+}
+.copy {
+  text-align: center;
+    margin-bottom: 20px;
+    font-size: 12px;
+}
