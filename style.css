@@ -57,20 +57,17 @@ body {
 }
 
 .my-button {
-  background: #ffefef;
   font-weight: 600;
-  color: #5c4f4d;
-  border-radius: 8px;
-  border: solid 1px #efd1d1;
-  padding: 10px;
-  margin: 0 0 10px 0;
+  border-radius: 12px;
+  padding: 12px;
+  margin: 0 0 12px 0;
   text-align: left;
   display: block;
   font-size: 22px;
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  transition: transform 0.3s ease;
+  transition: transform 0.25s ease;
   text-decoration: none;
 }
 
@@ -83,36 +80,36 @@ body {
   transform: scale(0.95);
 }
 
-/* BOTÓN CON DEGRADADO ANIMADO */
+/* BOTÓN PRINCIPAL – DEGRADADO ANIMADO */
 .gradient-button {
-  background: linear-gradient(
-    270deg,
-    #ffd7d7,
-    #ffffff,
-    #ffd7d7
-  );
+  background: linear-gradient(270deg, #ffffff, #ffd7d7, #ffffff);
   background-size: 600% 600%;
   animation: gradientMove 6s ease infinite;
   color: #000;
   border: none;
 }
 
-.gradient-button:hover {
-  filter: brightness(1.05);
-}
-
 @keyframes gradientMove {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
+/* BOTONES GLASS (ESTILO IPHONE) */
+.glass-button {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  color: #3d3d3d;
+}
+
+.glass-button:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+/* FOOTER */
 .copy {
   text-align: center;
   margin-bottom: 20px;
