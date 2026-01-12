@@ -54,7 +54,6 @@ body {
   padding-top: 10px;
 }
 
-/* BASE BOTONES */
 .my-button {
   border-radius: 14px;
   padding: 14px;
@@ -76,24 +75,17 @@ body {
   transform: scale(0.95);
 }
 
-/* ================= CTA ================= */
-
+/* CTA ULTRA DESTACADO */
 .cta-button {
   font-weight: 700;
-  letter-spacing: 0.6px;
   background: linear-gradient(270deg, #ffeeee, #ffffff, #ffeeee);
   background-size: 600% 600%;
-  animation:
-    gradientMove 5s ease infinite,
-    pulse 2.2s ease-in-out infinite,
-    ctaEnter 0.9s cubic-bezier(.2,.8,.2,1) both;
+  animation: gradientMove 5s ease infinite, pulse 2.2s ease-in-out infinite;
   color: #000;
   border: none;
   box-shadow: 0 0 0 rgba(255, 240, 240, 0.6);
-  z-index: 2;
 }
 
-/* Shine */
 .cta-button::after {
   content: "";
   position: absolute;
@@ -108,26 +100,6 @@ body {
   animation: shine 2.8s infinite;
 }
 
-/* Ripple touch */
-.cta-button::before {
-  content: "";
-  position: absolute;
-  width: 120%;
-  height: 120%;
-  background: radial-gradient(circle, rgba(255,255,255,0.5) 10%, transparent 60%);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0);
-  opacity: 0;
-  transition: transform 0.5s ease, opacity 0.5s ease;
-}
-
-.cta-button:active::before {
-  transform: translate(-50%, -50%) scale(1);
-  opacity: 1;
-}
-
-/* Animaciones */
 @keyframes gradientMove {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -146,22 +118,9 @@ body {
   100% { transform: translateX(120%); }
 }
 
-@keyframes ctaEnter {
-  0% {
-    opacity: 0;
-    transform: translateY(14px) scale(0.96);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-
-/* ================= GLASS ================= */
-
+/* GLASSMORPHISM – BOTONES SECUNDARIOS */
 .glass-button {
   font-weight: 400;
-  letter-spacing: 0.3px;
   background: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
@@ -174,26 +133,6 @@ body {
   background: rgba(255, 255, 255, 0.35);
 }
 
-.glass-button .icon-pull-right {
-  opacity: 0.6;
-  transition: transform 0.25s ease, opacity 0.25s ease;
-}
-
-.glass-button:hover .icon-pull-right {
-  transform: translateX(4px);
-  opacity: 1;
-}
-
-/* ================= ACCESIBILIDAD ================= */
-/* Respeta reducir movimiento del sistema */
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation: none !important;
-    transition: none !important;
-  }
-}
-
-/* FOOTER */
 .copy {
   text-align: center;
   font-size: 12px;
