@@ -54,7 +54,7 @@ body {
   padding-top: 10px;
 }
 
-/* BOTONES BASE */
+/* BASE BOTONES */
 .my-button {
   border-radius: 14px;
   padding: 14px;
@@ -76,9 +76,7 @@ body {
   transform: scale(0.95);
 }
 
-/* ========================= */
-/* CTA – CALL TO ACTION */
-/* ========================= */
+/* ================= CTA ================= */
 
 .cta-button {
   font-weight: 700;
@@ -92,9 +90,10 @@ body {
   color: #000;
   border: none;
   box-shadow: 0 0 0 rgba(255, 240, 240, 0.6);
+  z-index: 2;
 }
 
-/* Brillo dinámico */
+/* Shine */
 .cta-button::after {
   content: "";
   position: absolute;
@@ -109,12 +108,26 @@ body {
   animation: shine 2.8s infinite;
 }
 
-/* Efecto magnético */
-.cta-button:active {
-  transform: scale(0.93);
+/* Ripple touch */
+.cta-button::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(circle, rgba(255,255,255,0.5) 10%, transparent 60%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
-/* Animaciones CTA */
+.cta-button:active::before {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+/* Animaciones */
 @keyframes gradientMove {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -144,9 +157,7 @@ body {
   }
 }
 
-/* ========================= */
-/* BOTONES GLASS (REDES) */
-/* ========================= */
+/* ================= GLASS ================= */
 
 .glass-button {
   font-weight: 400;
@@ -163,7 +174,6 @@ body {
   background: rgba(255, 255, 255, 0.35);
 }
 
-/* Micro interacción iconos */
 .glass-button .icon-pull-right {
   opacity: 0.6;
   transition: transform 0.25s ease, opacity 0.25s ease;
@@ -172,6 +182,15 @@ body {
 .glass-button:hover .icon-pull-right {
   transform: translateX(4px);
   opacity: 1;
+}
+
+/* ================= ACCESIBILIDAD ================= */
+/* Respeta reducir movimiento del sistema */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
 }
 
 /* FOOTER */
